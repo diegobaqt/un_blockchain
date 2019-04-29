@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "namePrefix": {
+            "value": "asd"
+        },
+        "authType": {
+            "value": "password"
+        },
+        "adminUsername": {
+            "value": "gethadmin"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "ethereumNetworkID": {
+            "value": 10101010
+        },
+        "ethereumAccountPsswd": {
+            "value": null
+        },
+        "ethereumAccountPassphrase": {
+            "value": null
+        },
+        "consortiumMemberId": {
+            "value": 0
+        },
+        "numMiningNodes": {
+            "value": 2
+        },
+        "mnNodeVMSize": {
+            "value": "Standard_D1_v2"
+        },
+        "mnStorageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "numTXNodes": {
+            "value": 1
+        },
+        "txNodeVMSize": {
+            "value": "Standard_D1_v2"
+        },
+        "txStorageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "location": {
+            "value": "eastus2"
+        }
+    }
+}
