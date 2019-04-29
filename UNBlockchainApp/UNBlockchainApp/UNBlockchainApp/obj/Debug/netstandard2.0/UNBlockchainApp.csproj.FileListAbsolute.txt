@@ -1,0 +1,16 @@
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\bin\Debug\netstandard2.0\UNBlockchainApp.deps.json
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\bin\Debug\netstandard2.0\UNBlockchainApp.dll
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\bin\Debug\netstandard2.0\UNBlockchainApp.pdb
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\obj\Debug\netstandard2.0\UNBlockchainApp.csprojAssemblyReference.cache
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\obj\Debug\netstandard2.0\UNBlockchainApp.csproj.CoreCompileInputs.cache
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\obj\Debug\netstandard2.0\UNBlockchainApp.AssemblyInfoInputs.cache
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\obj\Debug\netstandard2.0\UNBlockchainApp.AssemblyInfo.cs
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\obj\Debug\netstandard2.0\UNBlockchainApp.dll
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\obj\Debug\netstandard2.0\UNBlockchainApp.pdb
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\obj\Debug\netstandard2.0\Views\DocumentationPage.xaml.g.cs
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\obj\Debug\netstandard2.0\Views\MasterPage.xaml.g.cs
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\obj\Debug\netstandard2.0\Views\TransactionPage.xaml.g.cs
+C:\Users\PC-78412\source\repos\UNBlockchainApp\UNBlockchainApp\UNBlockchainApp\obj\Debug\netstandard2.0\XamlC.stamp

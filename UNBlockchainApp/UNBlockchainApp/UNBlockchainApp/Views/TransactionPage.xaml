@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UNBlockchainApp.Views.TransactionPage"
+             Title="Transacciones">
+    <ContentPage.Content>
+        <StackLayout Padding="5" VerticalOptions="FillAndExpand">
+            <AbsoluteLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <ActivityIndicator x:Name="Loading"  
+                       IsRunning="False"  
+                       Color="{StaticResource SecundaryColor}"  
+                       BackgroundColor="Transparent"/>
+            </AbsoluteLayout>
+            <StackLayout Spacing="20" 
+                Margin="15,10,15,15" 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="StartAndExpand">
+
+                <StackLayout Spacing="5">
+                    <Label Text="Iniciar Transacción" 
+                            FontSize="Large" FontAttributes="Bold"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="Start" />
+                </StackLayout>
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="5">
+                    <StackLayout Spacing="2">
+                        <Label x:Name="LabelAddress" 
+                                Text="Dirección (de quien recibe)" 
+                                HorizontalOptions="FillAndExpand" 
+                                VerticalOptions="StartAndExpand">
+                        </Label>
+                        <Entry x:Name="EntryAddress"
+                               Text="0x655BF2EE9e909EfC6B7842eaCF831D989CcA493c"
+                               HorizontalOptions="FillAndExpand" 
+                               VerticalOptions="StartAndExpand">
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Spacing="2">
+                        <Label x:Name="LabelPrivateKey" 
+                               Text="Llave Privada"
+                               HorizontalOptions="FillAndExpand" 
+                               VerticalOptions="StartAndExpand">
+                        </Label>
+                        <Entry x:Name="EntryPrivateKey"
+                               HorizontalOptions="FillAndExpand" 
+                               VerticalOptions="StartAndExpand">
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Spacing="2">
+                        <Label x:Name="LabelAmount" 
+                               Text="Cantidad"
+                               HorizontalOptions="FillAndExpand" 
+                               VerticalOptions="StartAndExpand">
+                        </Label>
+                        <Entry x:Name="EntryAmount"
+                               HorizontalOptions="FillAndExpand" 
+                               VerticalOptions="StartAndExpand">
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Spacing="5">
+                        <Button x:Name="ButtonSend"
+                                Text="Enviar" 
+                                BackgroundColor="{StaticResource SecundaryColor}"
+                                TextColor="{StaticResource BackgroudColor}"
+                                CornerRadius="5"
+                                HorizontalOptions="FillAndExpand" 
+                                VerticalOptions="StartAndExpand">
+                        </Button>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
