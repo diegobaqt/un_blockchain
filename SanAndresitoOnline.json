@@ -1,0 +1,175 @@
+{
+  "ApplicationName": "SanAndresitoOnline",
+  "DisplayName": "San Andresito - Bogotá",
+  "Description": "Permite que un usuario Vendedor ofrezca un producto y pueda recibir una oferta por parte de un posible Comprador.",
+  "ApplicationRoles": [
+    {
+      "Name": "Vendedor",
+      "Description": "Usuario que quiere vender un artículo."
+    },
+    {
+      "Name": "Comprador",
+      "Description": "Usuario que desea comprar un artículo y realizar una oferta."
+    }
+  ],
+  "Workflows": [
+    {
+      "Name": "SanAndresitoOnline",
+      "DisplayName": "San Andresito - Bogotá",
+      "Description": "Maneja la lógica de negocios para un escenario simple de comprador-vendedor.",
+      "Initiators": [ "Vendedor" ],
+      "StartState":  "ItemAvailable",
+      "Properties": [
+        {
+          "Name": "State",
+          "DisplayName": "Estado",
+          "Description": "Mantiene el estado del contrato",
+          "Type": {
+            "Name": "state"
+          }
+        },
+        {
+          "Name": "Description",
+          "DisplayName": "Descripción",
+          "Description": "Describe el activo que se vende.",
+          "Type": {
+            "Name": "string"
+          }
+        },
+        {
+          "Name": "AskingPrice",
+          "DisplayName": "Precio inicial",
+          "Description": "El precio de venta del activo.",
+          "Type": {
+            "Name": "money"
+          }
+        },
+        {
+          "Name": "OfferPrice",
+          "DisplayName": "Precio de oferta",
+          "Description": "El precio ofrecido por el activo",
+          "Type": {
+            "Name": "money"
+          }
+        },
+        {
+          "Name": "InstanceBuyer",
+          "DisplayName": "Comprador",
+          "Description": "El usuario que realiza una oferta para este activo.",
+          "Type": {
+            "Name": "Comprador"
+          }
+        },
+        {
+          "Name": "InstanceOwner",
+          "DisplayName": "Vendedor",
+          "Description": "El vendedor de este activo en particular",
+          "Type": {
+            "Name": "Vendedor"
+          }
+        }
+      ],
+      "Constructor": {
+        "Parameters": [
+          {
+            "Name": "description",
+            "Description": "La descripción de este activo.",
+            "DisplayName": "Descripción",
+            "Type": {
+              "Name": "string"
+            }
+          },
+          {
+            "Name": "price",
+            "Description": "El precio de este activo.",
+            "DisplayName": "Precio",
+            "Type": {
+              "Name": "money"
+            }
+          }
+        ]
+      },
+      "Functions": [
+        {
+          "Name": "MakeOffer",
+          "DisplayName": "Hacer oferta",
+          "Description": "Hacer una oferta",
+          "Parameters": [
+            {
+              "Name": "offerPrice",
+              "Description": "Precio de oferta",
+              "DisplayName": "Precio de oferta",
+              "Type": {
+                "Name": "money"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "AcceptOffer",
+          "DisplayName": "Aceptar oferta",
+          "Description": "Aceptar oferta hecha",
+          "Parameters": []
+        },
+        {
+          "Name": "Reject",
+          "DisplayName": "Rechazar oferta",
+          "Description": "Rechazar oferta hecha",
+          "Parameters": []
+        }
+      ],
+      "States": [
+        {
+          "Name": "ItemAvailable",
+          "DisplayName": "Artículo disponible",
+          "Description": "El artículo está disponible",
+          "PercentComplete": 20,
+          "Style": "Success",
+          "Transitions": [
+            {
+              "AllowedRoles": [ "Comprador" ],
+              "AllowedInstanceRoles": [],
+              "Description": "Hacer una oferta por este activo",
+              "Function": "MakeOffer",
+              "NextStates": [ "OfferPlaced" ],
+              "DisplayName": "Hacer oferta"
+            }
+          ]
+        },
+        {
+          "Name": "OfferPlaced",
+          "DisplayName": "Oferta realizada",
+          "Description": "Se ha realizado una oferta por el artículo.",
+          "PercentComplete": 60,
+          "Style": "Success",
+          "Transitions": [
+            {
+              "AllowedRoles": [ ],
+              "AllowedInstanceRoles": [ "InstanceOwner" ],
+              "Description": "Acepte la oferta propuesta para el artículo.",
+              "Function": "AcceptOffer",
+              "NextStates": [ "Accepted" ],
+              "DisplayName": "Aceptar la oferta"
+            },
+            {
+              "AllowedRoles": [ ],
+              "AllowedInstanceRoles": [ "InstanceOwner" ],
+              "Description": "Rechazar la oferta propuesta para el artículo",
+              "Function": "Reject",
+              "NextStates": [ "ItemAvailable" ],
+              "DisplayName": "Reject"
+            }
+          ]
+        },
+        {
+          "Name": "Accepted",
+          "DisplayName": "Vendido",
+          "Description": "El proceso de transferencia de activos está completo",
+          "PercentComplete": 100,
+          "Style": "Success",
+          "Transitions": []
+        }
+      ]
+    }
+  ]
+}
